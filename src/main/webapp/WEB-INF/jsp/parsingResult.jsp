@@ -7,11 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="java.util.*, by.tc.task05.entity.Food"%>
-<%@ page import="java.io.PrintWriter" %>
 <html>
 <head>
-    <title>Result</title>
+    <title>Меню</title>
 </head>
 <body>
 
@@ -57,6 +55,5 @@ The when condition does not display a link for the current page--%>
 </c:if>
 
 <td><a href="FrontController?action=home">На главную</a></td>
-
 </body>
 </html>

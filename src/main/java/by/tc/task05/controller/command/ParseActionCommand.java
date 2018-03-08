@@ -31,12 +31,14 @@ public final class ParseActionCommand implements ActionCommand{
         String parserType = request.getParameter("parserType");
         List<Food> menu = null;
 
-        menu = parserService.getRequiredPartOfItemsList(request.getParameter("itemsPerPage"),
-                request.getParameter("parserType"), request.getParameter("pageNumber"));
+        menu = parserService.getRequiredPartOfItemsList(request.getParameter("parserType"),
+                                                        request.getParameter("pageNumber"),
+                                                        request.getParameter("itemsPerPage"));
+
+        int countOfPages = parserService.getCountOfPages(parserType, Integer.parseInt(request.getParameter("itemsPerPage")));
 
         request.setAttribute("menu", menu);
-        request.setAttribute("countOfPages",
-                parserService.getCountOfPages(parserType, Integer.parseInt(request.getParameter("itemsPerPage"))));
+        request.setAttribute("countOfPages", countOfPages);
         request.setAttribute("pageNumber", setPage(request));
         request.setAttribute("parserType", request.getParameter("parserType"));
         request.setAttribute("action", request.getParameter("action"));

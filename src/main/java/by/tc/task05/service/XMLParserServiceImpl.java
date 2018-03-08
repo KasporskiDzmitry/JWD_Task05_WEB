@@ -38,7 +38,7 @@ public class XMLParserServiceImpl implements XMLParserService {
     }
 
     @Override
-    public List<Food> getRequiredPartOfItemsList(String itemsPerPage, String parserType, String pageNumber) throws ServiceException {
+    public List<Food> getRequiredPartOfItemsList(String parserType, String pageNumber, String itemsPerPage) throws ServiceException {
         List<Food> requiredList = parse(parserType);
 
         int pNumber = Integer.parseInt(pageNumber);

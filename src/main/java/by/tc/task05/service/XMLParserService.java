@@ -12,5 +12,5 @@ public interface XMLParserService {
 
     List<Food> parse(String typeOfParser) throws ServiceException;
     int getCountOfPages(String parseType, int itemsPerPage) throws ServiceException;
-    List<Food> getRequiredPartOfItemsList(String itemsPerPage, String parserType, String pageNumber) throws ServiceException;
+    List<Food> getRequiredPartOfItemsList(String parserType, String pageNumber, String itemsPerPage) throws ServiceException;
 }
