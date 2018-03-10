@@ -2,9 +2,6 @@ package by.tc.task05.dao;
 
 import by.tc.task05.dao.exception.DAOException;
 import by.tc.task05.entity.Food;
-import org.xml.sax.SAXException;
-
-import java.io.IOException;
 import java.util.List;
 
 /**
